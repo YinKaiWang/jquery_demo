@@ -44,4 +44,9 @@ require(['jquery'],function($){
 			});
 		}
 	});
+	// fadeToggle
+	$("#f_t_btn").on('click', function(event) {
+		event.preventDefault();
+		$("#f_t_module").fadeToggle('slow');
+	});
 })
