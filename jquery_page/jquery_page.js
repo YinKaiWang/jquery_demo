@@ -69,4 +69,9 @@ require(['jquery'],function($){
 			ele.slideUp(speed);
 		}
 	});
+	// slideToggle
+	$("#s_s_t").on('click',function(event) {
+		event.preventDefault();
+		$("#s_s_t_module").slideToggle("slow");
+	});
 })
