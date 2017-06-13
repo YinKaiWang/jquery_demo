@@ -7,15 +7,21 @@
 </head>
 <body>
 	<!-- show & hide -->
-	<div id="s_h" class="s_h b fl">
+	<div id="s_h" class="s_h b fl box">
 		<input id="s_h_sure" class="btn btn_sure" type="button" value="show">
 		<input id="s_h_cancel" class="btn btn_cancel" type="button" value="hide">
-		<div id="s_h_module" class="b hide"></div>
+		<div id="s_h_module" class="b hide module"></div>
 	</div>
 	<!-- toggle -->
-	<div id="t" class="b fl">
+	<div id="t" class="b fl box">
 		<input type="button" value="toggle" id="t_btn" class="btn btn_sure">
-		<div id="t_module" class="b"></div>
+		<div id="t_module" class="b module"></div>
+	</div>
+	<!-- fadeIn & fadeOut -->
+	<div id="f_f" class="b fl box">
+		<input id="f_f_In" class="btn btn_sure" type="button" value="fadeIn">
+		<input id="f_f_Out" class="btn btn_cancel" type="button" value="fadeOut">
+		<div id="f_f_module" class="hide module" style="background-color: green"></div>
 	</div>
 </body>
 <script src="../public/require.js" data-main="jquery_page"></script>

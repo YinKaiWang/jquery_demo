@@ -38,20 +38,18 @@ input{
 .fr{
 	float: right;
 }
-.s_h,#t{
+.box{
 	width:200px;
 	height: 200px;
+	margin-left: 20px;
 	.btn{
 		margin-top: 10px;
 		margin-left: 10px;
 	}
-	#s_h_module,#t_module{
+	.module{
 		width: 100px;
 		height: 100px;
 		margin-top: 20px;
 		margin-left: 20px;
 	}
-}
-#t{
-	margin-left: 20px;
 }

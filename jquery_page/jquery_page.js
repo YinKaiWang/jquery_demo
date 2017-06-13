@@ -27,4 +27,21 @@ require(['jquery'],function($){
 		event.preventDefault();
 		$("#t_module").toggle(500);
 	});
+	// fadeIn & fadeOut
+	$("#f_f").on('click', '.btn', function(event) {
+		event.preventDefault();
+		var $this=$(this),
+			txt=$this.val(),
+			speed=1000,
+			ele=$("#f_f_module");
+		if(txt=="fadeIn"){
+			ele.fadeIn(speed, function() {
+				ele.html(txt+"速度:"+speed);
+			});
+		}else {
+			ele.fadeOut(speed, function() {
+				alert(txt+"速度:"+speed);
+			});
+		}
+	});
 })
