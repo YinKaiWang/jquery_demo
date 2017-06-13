@@ -39,7 +39,8 @@ input {
 .box {
   width: 200px;
   height: 200px;
-  margin-left: 20px; }
+  margin-left: 20px;
+  margin-top: 20px; }
   .box .btn {
     margin-top: 10px;
     margin-left: 10px; }

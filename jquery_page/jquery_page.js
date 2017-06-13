@@ -49,4 +49,24 @@ require(['jquery'],function($){
 		event.preventDefault();
 		$("#f_t_module").fadeToggle('slow');
 	});
+	// fadeTo
+	$("#f_to_btn").on('click', function(event) {
+		event.preventDefault();
+		$("#f_to_module").fadeTo('slow',0.5);
+	});
+	// slideDown & slideUp
+	$("#s_s").on('click', '.btn', function(event) {
+		event.preventDefault();
+		var $this=$(this),
+			txt=$this.val(),
+			ele=$("#s_s_module"),
+			speed=800;
+		if(txt=="slideDown"){
+			ele.slideDown(speed, function() {
+				ele.html(txt+"速度:"+speed);
+			});
+		}else {
+			ele.slideUp(speed);
+		}
+	});
 })
