@@ -38,17 +38,20 @@ input{
 .fr{
 	float: right;
 }
-.s_h{
+.s_h,#t{
 	width:200px;
 	height: 200px;
 	.btn{
 		margin-top: 10px;
 		margin-left: 10px;
 	}
-	#s_h_module{
+	#s_h_module,#t_module{
 		width: 100px;
 		height: 100px;
 		margin-top: 20px;
 		margin-left: 20px;
 	}
+}
+#t{
+	margin-left: 20px;
 }

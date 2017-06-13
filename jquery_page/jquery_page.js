@@ -22,4 +22,9 @@ require(['jquery'],function($){
 			});
 		}
 	});
+	// toggle
+	$("#t_btn").on('click',function(event) {
+		event.preventDefault();
+		$("#t_module").toggle(500);
+	});
 })
