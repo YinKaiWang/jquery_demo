@@ -72,6 +72,11 @@ require(['jquery'],function($){
 	// slideToggle
 	$("#s_s_t").on('click',function(event) {
 		event.preventDefault();
-		$("#s_s_t_module").slideToggle("slow");
+		$("#s_s_t_module").stop(true,true).slideToggle("slow");
+	});
+	// window.open
+	$("#w_o").on('click', function(event) {
+		event.preventDefault();
+		window.open("http://www.wangyinkai.cn");
 	});
 })
