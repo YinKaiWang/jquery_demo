@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>左右div自适应相同高度</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body>div{
+			float: left;
+		}
+		#left{
+			background-color: green;
+		}
+		#right{
+			background-color: pink;
+		}
+	</style>
+</head>
+<body>
+	<div id="left">
+		<div style="padding:10px;">
+			<p>左侧页面</p>
+		</div>
+	</div>
+	<div id="right">
+		<div style="padding:10px;">
+			<p>右侧页面</p>
+			<p>右侧页面</p>
+			<p>右侧页面</p>
+			<p>右侧页面</p>
+			<p>右侧页面</p>
+			<p>右侧页面</p>
+		</div>
+	</div>
+	<script>
+		function $(id){
+			return document.getElementById(id);
+		}
+		function autoHeight(){
+			if($("left").offsetHeight>=$("right").offsetHeight){
+				$("right").style.height=$("left").offsetHeight+"px";
+			}else{
+				$("left").style.height=$("right").offsetHeight+"px";
+			}
+		}
+		window.onload=function(){
+			autoHeight();
+		}
+	</script>
+</body>
+</html>
