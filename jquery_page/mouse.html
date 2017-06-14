@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>获取鼠标坐标</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			height: 1000px;
+		}
+		p{
+			position: fixed;
+			left: 0;
+		}
+	</style>
+</head>
+<body>
+	<p id="screen-container" style="top: 0">
+		鼠标在当前屏幕的坐标:<span id="screen"></span>
+		;参考点是屏幕左上角;
+	</p>
+	<p id="client-container" style="top: 100px;">
+		鼠标在窗口客户区中的坐标:<span id="client"></span>
+		;参考点是窗口的左上角,Y轴不随body的高度变化;
+	</p>
+	<p id="page-container" style="top:200px;">
+		鼠标在窗口页面中的坐标:<span id="page"></span>
+		;参考点是窗口的左上角,Y轴随着body的高度变化;
+	</p>
+</body>
+<script src="../public/jquery-1.8.2.min.js"></script>
+<script>
+	function getScreenCoordinates(e){//当前屏幕坐标
+		var x=e.screenX,
+			y=e.screenY;
+		$("#screen").text("X:"+x+",Y:"+y);
+	}
+	function getClientCoordinates(e){//当前窗口客户区坐标
+		var x=e.clientX,
+			y=e.clientY;
+		$("#client").text("X:"+x+",Y:"+y);
+	}
+	function getPageCoordinates(e){//当前窗口页面中的坐标
+		var x=e.pageX,
+			y=e.pageY;
+		$("#page").text("X:"+x+",Y:"+y);
+	}
+	$(function(){
+		$(document).mousemove(function(e) {
+			getScreenCoordinates(e);
+			getClientCoordinates(e);
+			getPageCoordinates(e);
+		});
+	})
+
+</script>
+</html>
