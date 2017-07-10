@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="http://www.lushisjt.com/lushisjt/public/style/mobile-reset.css">
+	<style>
+		div,span{
+		    width: auto;
+		    height: auto;
+		}
+	</style>
+</head>
+<body>
+	<div id="player-container"></div>
+    <script type="text/javascript" src="http://www.zhluohe.com/player/cyberplayer.js"></script>
+    <script src="http://www.lushisjt.com/lushisjt/public/lib/jquery.min.js"></script>
+    <script type="text/javascript">
+        var player = cyberplayer("player-container").setup({
+            width: '100%',
+            stretching: "uniform",
+            file: "http://www.zhluohe.com/video/luohebaodao0418.mp4",
+            autostart: true,
+            repeat: false,
+            volume: 100,
+            controls: true,
+            ak: '7874b57e79d64f0b970a95a18de66358' // 公有云平台注册即可获得accessKey
+        });
+        setTimeout(function(){
+            // if(!$("#player-container").hasClass('jw-flag-compact-player')){
+            //     $("#player-container").addClass('jw-flag-compact-player');
+            // }
+            $("#player-container").addClass('jw-state-playing').removeClass('jw-state-idle,jw-flag-user-inactive');
+            // $("#player-container").addClass('jw-skin-bce').removeClass('jw-skin-seven');
+        }, 500)
+    </script>
+    
+</body>
+</html>
